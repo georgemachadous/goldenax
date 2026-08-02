@@ -1,11 +1,7 @@
 const root=document.documentElement;
 const nav=document.querySelector('.nav');
 const menu=document.querySelector('.menu-toggle');
-const lang=document.querySelector('.lang');
 const header=document.querySelector('.header');
-function setLanguage(value){root.dataset.lang=value;root.lang=value==='pt'?'pt-BR':'en';document.querySelectorAll('[data-pt][data-en]').forEach(el=>el.textContent=el.dataset[value]);localStorage.setItem('goldenax-lang',value)}
-setLanguage(localStorage.getItem('goldenax-lang')||'pt');
-if(lang)lang.addEventListener('click',()=>setLanguage(root.dataset.lang==='pt'?'en':'pt'));
 if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}))}
 if(header)window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>8),{passive:true});
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
