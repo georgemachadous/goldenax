@@ -1,0 +1,31 @@
+.reference-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(9, 11, 13, 0.14), transparent 38%);
+}
+
+.reference-hero-image > img {
+  object-position: center center;
+}
+
+.reference-human-card {
+  z-index: 1;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 640px) {
+  .reference-hero-image {
+    min-height: 290px;
+  }
+
+  .reference-hero-image > img {
+    object-position: 48% center;
+  }
+
+  .reference-human-card {
+    width: 230px;
+  }
+}
