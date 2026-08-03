@@ -16,6 +16,27 @@
   backdrop-filter: blur(8px);
 }
 
+.reference-service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.reference-service-grid article {
+  flex: 0 1 290px;
+  width: 100%;
+  max-width: 310px;
+}
+
+@media (max-width: 980px) {
+  .reference-service-grid article {
+    flex-basis: calc(50% - 18px);
+    max-width: 420px;
+  }
+}
+
 @media (max-width: 640px) {
   .reference-hero-image {
     min-height: 290px;
@@ -27,5 +48,14 @@
 
   .reference-human-card {
     width: 230px;
+  }
+
+  .reference-service-grid {
+    gap: 14px;
+  }
+
+  .reference-service-grid article {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
