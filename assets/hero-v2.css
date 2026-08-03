@@ -17,23 +17,25 @@
 }
 
 .reference-service-grid {
-  display: flex;
-  flex-wrap: wrap;
+  width: min(100%, 1120px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   justify-content: center;
   align-items: stretch;
   gap: 18px;
 }
 
 .reference-service-grid article {
-  flex: 0 1 290px;
   width: 100%;
-  max-width: 310px;
+  min-width: 0;
+  min-height: 220px;
 }
 
 @media (max-width: 980px) {
-  .reference-service-grid article {
-    flex-basis: calc(50% - 18px);
-    max-width: 420px;
+  .reference-service-grid {
+    width: min(100%, 820px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -51,11 +53,8 @@
   }
 
   .reference-service-grid {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
     gap: 14px;
-  }
-
-  .reference-service-grid article {
-    flex-basis: 100%;
-    max-width: 100%;
   }
 }
