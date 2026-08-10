@@ -130,7 +130,7 @@ function applyLanguage(language,save=false){
 
 function installLanguageSwitcher(){
   const style=document.createElement('style');
-  style.textContent='.language-switcher{display:flex;align-items:center;gap:5px;margin-left:auto;padding-left:14px}.language-switcher button{border:0;background:transparent;color:#c8c8c8;font:700 12px/1 Arial,sans-serif;letter-spacing:.08em;padding:7px 5px;cursor:pointer;transition:color .2s ease}.language-switcher button:hover,.language-switcher button.active{color:#e8bd55}.language-switcher .divider{color:#5f6368;font-size:11px}@media(max-width:760px){.language-switcher{padding-left:8px}.language-switcher button{padding:6px 3px}}';
+  style.textContent='.language-switcher{display:flex;align-items:center;gap:5px;margin-left:auto;padding-left:14px}.language-switcher button{border:0;background:transparent;color:#c8c8c8;font:700 12px/1 Arial,sans-serif;letter-spacing:.08em;padding:7px 5px;cursor:pointer;transition:color .2s ease}.language-switcher button:hover,.language-switcher button.active{color:#e8bd55}.language-switcher .divider{color:#5f6368;font-size:11px}.language-switcher.mobile{display:none}@media(max-width:960px){.language-switcher.desktop{display:none}.language-switcher.mobile{display:flex;justify-content:center;margin:4px 0 2px;padding:10px 0;border-top:1px solid #e5e3dc;border-bottom:1px solid #e5e3dc}.language-switcher.mobile button{min-width:64px;color:#454b53;font-size:13px;padding:10px}.language-switcher.mobile button:hover,.language-switcher.mobile button.active{color:#986906;background:#f6f5f1;border-radius:5px}.language-switcher.mobile .divider{color:#9a9da2}}';
   document.head.appendChild(style);
 
   let utilityInner=document.querySelector('.utility-inner');
@@ -142,12 +142,17 @@ function installLanguageSwitcher(){
     utilityInner=bar.querySelector('.utility-inner');
   }
 
-  const switcher=document.createElement('div');
-  switcher.className='language-switcher';
-  switcher.setAttribute('aria-label','Language selection');
-  switcher.innerHTML='<button type="button" data-language="pt" aria-label="Português">PT</button><span class="divider">|</span><button type="button" data-language="en" aria-label="English">EN</button>';
-  utilityInner.appendChild(switcher);
-  switcher.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.language,true)));
+  function createSwitcher(location){
+    const switcher=document.createElement('div');
+    switcher.className=`language-switcher ${location}`;
+    switcher.setAttribute('aria-label','Selecionar idioma / Select language');
+    switcher.innerHTML='<button type="button" data-language="pt" aria-label="Selecionar português">Português</button><span class="divider" aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Select English">English</button>';
+    switcher.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.language,true)));
+    return switcher;
+  }
+
+  utilityInner.appendChild(createSwitcher('desktop'));
+  if(nav)nav.insertBefore(createSwitcher('mobile'),nav.querySelector('.quote'));
 }
 
 installLanguageSwitcher();
