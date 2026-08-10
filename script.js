@@ -146,7 +146,7 @@ function installLanguageSwitcher(){
     const switcher=document.createElement('div');
     switcher.className=`language-switcher ${location}`;
     switcher.setAttribute('aria-label','Selecionar idioma / Select language');
-    switcher.innerHTML='<button type="button" data-language="pt" aria-label="Selecionar português">Português</button><span class="divider" aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Select English">English</button>';
+    switcher.innerHTML='<button type="button" data-language="pt" aria-label="Selecionar português">PT</button><span class="divider" aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Select English">EN</button>';
     switcher.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.language,true)));
     return switcher;
   }
