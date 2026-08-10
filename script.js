@@ -39,7 +39,7 @@ const translations=new Map([
   ['Atendimento Rápido','Fast Response'],
   ['Suporte Humano','Human Support'],
   ['Anos de Experiência','Years of Experience'],
-  ['Atendimento Trilíngue','Trilingual Support'],
+  ['Atendimento Bilíngue','Bilingual Support'],
   ['Atendimento humano','Human support'],
   ['Tecnologia é importante. Pessoas fazem a diferença.','Technology matters. People make the difference.'],
   ['Soluções de TI para pequenas empresas','IT solutions for small businesses'],
@@ -76,206 +76,13 @@ const translations=new Map([
   ['Todos os direitos reservados.','All rights reserved.']
 ]);
 
-const spanishTranslations=new Map([
-  ['Pular para o conteúdo','Saltar al contenido'],
-  ['Serviços','Servicios'],
-  ['Sobre','Nosotros'],
-  ['Contato','Contacto'],
-  ['Solicitar orçamento','Solicitar presupuesto'],
-  ['Tecnologia que mantém sua empresa em movimento','Tecnología que mantiene su empresa en movimiento'],
-  ['Quando a tecnologia funciona,','Cuando la tecnología funciona,'],
-  ['seu negócio pode crescer.','su negocio puede crecer.'],
-  ['A GoldenAx ajuda pequenas empresas a resolver problemas de computadores, redes e presença digital com atendimento próximo, explicações claras e soluções adequadas ao seu negócio.','GoldenAx ayuda a pequeñas empresas a resolver problemas de computadoras, redes y presencia digital con atención cercana, explicaciones claras y soluciones adecuadas para su negocio.'],
-  ['Falar no WhatsApp','Hablar por WhatsApp'],
-  ['Atendimento Rápido','Atención Rápida'],
-  ['Suporte Humano','Soporte Humano'],
-  ['Anos de Experiência','Años de Experiencia'],
-  ['Atendimento Trilíngue','Atención Trilingüe'],
-  ['Atendimento humano','Atención humana'],
-  ['Tecnologia é importante. Pessoas fazem a diferença.','La tecnología es importante. Las personas marcan la diferencia.'],
-  ['Soluções de TI para pequenas empresas','Soluciones de TI para pequeñas empresas'],
-  ['Como podemos ajudar sua empresa','Cómo podemos ayudar a su empresa'],
-  ['Serviços essenciais para manter sua empresa produtiva, conectada e bem apresentada.','Servicios esenciales para mantener su empresa productiva, conectada y bien presentada.'],
-  ['Suporte de TI','Soporte de TI'],
-  ['Atendimento remoto e presencial, quando necessário, para resolver problemas de computadores, sistemas e configurações.','Atención remota y presencial, cuando sea necesario, para resolver problemas de computadoras, sistemas y configuraciones.'],
-  ['Manutenção de computadores','Mantenimiento de computadoras'],
-  ['Diagnóstico, limpeza lógica, atualizações e recomendações para computadores e notebooks.','Diagnóstico, limpieza de software, actualizaciones y recomendaciones para computadoras y portátiles.'],
-  ['Redes e Wi-Fi','Redes y Wi-Fi'],
-  ['Instalação, configuração e suporte para redes estáveis e Wi-Fi de qualidade.','Instalación, configuración y soporte para redes estables y Wi-Fi de calidad.'],
-  ['Sites institucionais','Sitios web empresariales'],
-  ['Sites rápidos e responsivos, desenvolvidos com apoio de IA para apresentar sua empresa com profissionalismo.','Sitios rápidos y adaptables, desarrollados con apoyo de IA para presentar su empresa profesionalmente.'],
-  ['Mais de duas décadas de tecnologia a serviço de pequenas empresas.','Más de dos décadas de tecnología al servicio de pequeñas empresas.'],
-  ['Experiência, processos e soluções que geram resultados reais.','Experiencia, procesos y soluciones que generan resultados reales.'],
-  ['Uma empresa organizada desde o início com processos apoiados por IA.','Una empresa organizada desde el inicio con procesos apoyados por IA.'],
-  ['Eficiência, qualidade e melhoria contínua em tudo que fazemos.','Eficiencia, calidad y mejora continua en todo lo que hacemos.'],
-  ['Vamos conversar?','¿Hablamos?'],
-  ['Conte o que está acontecendo. A gente começa por aí.','Cuéntenos qué está pasando. Empezamos por ahí.'],
-  ['Entrar em contato','Contactar'],
-  ['Perguntas frequentes','Preguntas frecuentes'],
-  ['Respostas simples antes do primeiro contato.','Respuestas sencillas antes del primer contacto.'],
-  ['Vocês atendem empresas de qualquer tamanho?','¿Atienden empresas de cualquier tamaño?'],
-  ['O foco inicial são pequenas empresas, mas cada necessidade pode ser avaliada individualmente.','Nuestro enfoque inicial son las pequeñas empresas, pero cada necesidad puede evaluarse individualmente.'],
-  ['O atendimento é remoto ou presencial?','¿La atención es remota o presencial?'],
-  ['Os dois formatos são possíveis, dependendo da necessidade e da segurança do atendimento.','Ambas modalidades son posibles, según la necesidad y la seguridad de la atención.'],
-  ['Qual o tempo médio de resposta?','¿Cuál es el tiempo medio de respuesta?'],
-  ['O retorno inicial é feito o mais rápido possível, de acordo com a urgência e a disponibilidade.','La respuesta inicial se realiza lo antes posible, según la urgencia y la disponibilidad.'],
-  ['Como funciona o orçamento?','¿Cómo funciona el presupuesto?'],
-  ['Primeiro entendemos o problema. Depois apresentamos a recomendação e o escopo para aprovação.','Primero entendemos el problema. Después presentamos la recomendación y el alcance para su aprobación.'],
-  ['Tecnologia confiável. Atendimento humano.','Tecnología confiable. Atención humana.'],
-  ['Privacidade','Privacidad'],
-  ['Termos','Términos'],
-  ['Todos os direitos reservados.','Todos los derechos reservados.'],
-  ['Serviços GoldenAx','Servicios GoldenAx'],
-  ['Tecnologia que resolve problemas reais.','Tecnología que resuelve problemas reales.'],
-  ['Cada serviço começa com uma conversa para entender o impacto no negócio e evitar soluções desnecessárias.','Cada servicio comienza con una conversación para entender el impacto en el negocio y evitar soluciones innecesarias.'],
-  ['Suporte','Soporte'],
-  ['Suporte remoto e presencial','Soporte remoto y presencial'],
-  ['Atendimento para problemas de computadores, sistemas, contas, impressoras, configurações e desempenho.','Atención para problemas de computadoras, sistemas, cuentas, impresoras, configuraciones y rendimiento.'],
-  ['Diagnóstico inicial','Diagnóstico inicial'],
-  ['Configuração e correção','Configuración y solución de problemas'],
-  ['Orientação ao usuário','Orientación al usuario'],
-  ['Acompanhamento após o atendimento','Seguimiento después del servicio'],
-  ['Conectividade','Conectividad'],
-  ['Avaliação e organização da conectividade para reduzir lentidão, quedas e áreas sem cobertura.','Evaluación y organización de la conectividad para reducir lentitud, interrupciones y áreas sin cobertura.'],
-  ['Avaliação de cobertura','Evaluación de cobertura'],
-  ['Configuração de roteadores e pontos de acesso','Configuración de enrutadores y puntos de acceso'],
-  ['Organização básica da rede','Organización básica de la red'],
-  ['Orientação para crescimento','Orientación para el crecimiento'],
-  ['Equipamentos','Equipos'],
-  ['Manutenção de computadores e notebooks','Mantenimiento de computadoras y portátiles'],
-  ['Diagnóstico, limpeza lógica, atualizações e recomendações para reduzir falhas e prolongar a vida útil.','Diagnóstico, limpieza de software, actualizaciones y recomendaciones para reducir fallas y prolongar la vida útil.'],
-  ['Análise de desempenho','Análisis de rendimiento'],
-  ['Atualizações e configurações','Actualizaciones y configuraciones'],
-  ['Planejamento de substituição','Planificación de reemplazo'],
-  ['Relatório do atendimento','Informe del servicio'],
-  ['Presença digital','Presencia digital'],
-  ['Sites rápidos, responsivos e objetivos para apresentar a empresa com profissionalismo e facilitar contatos.','Sitios rápidos, adaptables y objetivos para presentar la empresa profesionalmente y facilitar el contacto.'],
-  ['Design alinhado à marca','Diseño alineado con la marca'],
-  ['Versão para celular','Versión para dispositivos móviles'],
-  ['SEO inicial','SEO inicial'],
-  ['Publicação e orientação','Publicación y orientación'],
-  ['Não encontrou exatamente o que precisa?','¿No encontró exactamente lo que necesita?'],
-  ['Conte o problema. Nós avaliamos e indicamos o próximo passo.','Cuéntenos el problema. Lo evaluaremos e indicaremos el siguiente paso.'],
-  ['Solicitar avaliação','Solicitar evaluación'],
-  ['Sobre a GoldenAx','Acerca de GoldenAx'],
-  ['Uma empresa criada para tornar a tecnologia mais simples e confiável.','Una empresa creada para hacer que la tecnología sea más sencilla y confiable.'],
-  ['A GoldenAx nasceu de uma ideia simples.','GoldenAx nació de una idea sencilla.'],
-  ['Muitas pequenas empresas não precisam de uma estrutura enorme de tecnologia. Elas precisam de alguém confiável para ouvir, orientar e resolver.','Muchas pequeñas empresas no necesitan una enorme estructura tecnológica. Necesitan a alguien confiable que escuche, oriente y resuelva.'],
-  ['Depois de mais de vinte anos trabalhando com sistemas, dados, suporte, controle de acesso e ambientes corporativos, George Machado decidiu criar a GoldenAx para aproximar essa experiência das empresas locais.','Después de más de veinte años trabajando con sistemas, datos, soporte, control de acceso y entornos corporativos, George Machado decidió crear GoldenAx para acercar esa experiencia a las empresas locales.'],
-  ['O que acreditamos','En qué creemos'],
-  ['Qualidade técnica só tem valor quando melhora a vida do cliente.','La calidad técnica solo tiene valor cuando mejora la vida del cliente.'],
-  ['Clareza','Claridad'],
-  ['Explicar de forma simples, sem esconder decisões atrás de palavras técnicas.','Explicar de forma sencilla, sin ocultar decisiones detrás de términos técnicos.'],
-  ['Confiança','Confianza'],
-  ['Cumprir o combinado e tratar a tecnologia do cliente com responsabilidade.','Cumplir lo acordado y tratar la tecnología del cliente con responsabilidad.'],
-  ['Proximidade','Cercanía'],
-  ['Ouvir o contexto do negócio antes de indicar qualquer solução.','Escuchar el contexto del negocio antes de recomendar cualquier solución.'],
-  ['Qualidade','Calidad'],
-  ['Entregar algo que funcione bem, seja organizado e possa crescer.','Entregar algo que funcione bien, esté organizado y pueda crecer.'],
-  ['Trajetória','Trayectoria'],
-  ['Experiência construída ao longo do tempo.','Experiencia construida a lo largo del tiempo.'],
-  ['Empreendedorismo e desenvolvimento','Emprendimiento y desarrollo'],
-  ['Projetos de sistemas e consultoria para empresas no Brasil.','Proyectos de sistemas y consultoría para empresas en Brasil.'],
-  ['Telecomunicações e software','Telecomunicaciones y software'],
-  ['Atuação em suporte, sistemas e desenvolvimento corporativo.','Trabajo en soporte, sistemas y desarrollo corporativo.'],
-  ['Ambientes de missão crítica','Entornos de misión crítica'],
-  ['Mais de treze anos em sistemas, acessos, dados, produção e processos corporativos.','Más de trece años en sistemas, accesos, datos, producción y procesos corporativos.'],
-  ['Nascimento da GoldenAx','Nacimiento de GoldenAx'],
-  ['Experiência direcionada a pequenas empresas na Flórida.','Experiencia orientada a pequeñas empresas en Florida.'],
-  ['Founder da GoldenAx','Fundador de GoldenAx'],
-  ['Quem está por trás da GoldenAx','Quién está detrás de GoldenAx'],
-  ['Founder • Tecnologia com experiência e proximidade.','Fundador • Tecnología con experiencia y cercanía.'],
-  ['Experiência técnica com visão de negócio.','Experiencia técnica con visión empresarial.'],
-  ['George reúne mais de vinte anos de experiência em tecnologia, passando por desenvolvimento de software, suporte, redes, dados, Power BI, bancos de dados, integrações, controle de acesso e implantação de sistemas.','George reúne más de veinte años de experiencia en tecnología, incluyendo desarrollo de software, soporte, redes, datos, Power BI, bases de datos, integraciones, control de acceso e implementación de sistemas.'],
-  ['Durante mais de treze anos em uma grande empresa de seguros, trabalhou com operações críticas, acessos, incidentes de produção e entregas corporativas. Essa experiência formou a disciplina e o padrão de qualidade que agora orientam a GoldenAx.','Durante más de trece años en una gran aseguradora, trabajó con operaciones críticas, accesos, incidentes de producción y entregas corporativas. Esa experiencia formó la disciplina y el estándar de calidad que hoy orientan a GoldenAx.'],
-  ['Criei a GoldenAx para que pequenas empresas possam contar com tecnologia bem cuidada e com alguém que explique tudo de forma simples.','Creé GoldenAx para que las pequeñas empresas puedan contar con tecnología bien cuidada y con alguien que explique todo de forma sencilla.'],
-  ['Princípios do Founder','Principios del fundador'],
-  ['Ouvir antes de recomendar','Escuchar antes de recomendar'],
-  ['Explicar antes de executar','Explicar antes de ejecutar'],
-  ['Não vender o que o cliente não precisa','No vender lo que el cliente no necesita'],
-  ['Qualidade em cada entrega','Calidad en cada entrega'],
-  ['Contato','Contacto'],
-  ['Conte o que está acontecendo. Nós começamos por aí.','Cuéntenos qué está pasando. Empezamos por ahí.'],
-  ['Sem compromisso e sem linguagem complicada.','Sin compromiso y sin lenguaje complicado.'],
-  ['Fale com a GoldenAx','Hable con GoldenAx'],
-  ['Descreva brevemente o problema, a urgência e a melhor forma de retorno.','Describa brevemente el problema, la urgencia y la mejor forma de contacto.'],
-  ['Telefone e WhatsApp','Teléfono y WhatsApp'],
-  ['Área inicial de atendimento','Área inicial de atención'],
-  ['Idiomas','Idiomas'],
-  ['Português • English • Español','Português • English • Español'],
-  ['Seu nome','Su nombre'],
-  ['Empresa','Empresa'],
-  ['E-mail ou telefone','Correo electrónico o teléfono'],
-  ['Informe um e-mail válido ou telefone com código de área.','Ingrese un correo electrónico válido o un teléfono con código de área.'],
-  ['Como podemos ajudar?','¿Cómo podemos ayudar?'],
-  ['Enviar pelo WhatsApp →','Enviar por WhatsApp →'],
-  ['Ao enviar, o WhatsApp será aberto com sua mensagem pronta para confirmação.','Al enviar, WhatsApp se abrirá con su mensaje listo para confirmar.'],
-  ['A forma como a GoldenAx deve trabalhar.','La forma en que GoldenAx debe trabajar.'],
-  ['Uma empresa organizada com apoio de IA — sem abrir mão do controle humano.','Una empresa organizada con apoyo de IA, sin renunciar al control humano.'],
-  ['O GoldenAx OS é o conjunto de governança, processos, agentes, checklists e indicadores usados para construir e operar a GoldenAx de forma documentada e auditável.','GoldenAx OS es el conjunto de gobierno, procesos, agentes, listas de verificación e indicadores utilizados para construir y operar GoldenAx de forma documentada y auditable.'],
-  ['IA como equipe de apoio. Founder como autoridade final.','IA como equipo de apoyo. El fundador como autoridad final.'],
-  ['CEO IA','CEO IA'],
-  ['Apoia planejamento, prioridades, riscos e acompanhamento das decisões.','Apoya la planificación, las prioridades, los riesgos y el seguimiento de las decisiones.'],
-  ['Comercial IA','Comercial IA'],
-  ['Organiza leads, prepara propostas e acompanha oportunidades.','Organiza prospectos, prepara propuestas y hace seguimiento de oportunidades.'],
-  ['Atendimento IA','Atención IA'],
-  ['Recebe informações, classifica solicitações e prepara o próximo passo.','Recibe información, clasifica solicitudes y prepara el siguiente paso.'],
-  ['Operações IA','Operaciones IA'],
-  ['Acompanha chamados, tarefas, checklists e relatórios.','Da seguimiento a solicitudes, tareas, listas de verificación e informes.'],
-  ['Financeiro IA','Finanzas IA'],
-  ['Organiza registros e indicadores, sem autoridade para movimentar dinheiro.','Organiza registros e indicadores, sin autoridad para mover dinero.'],
-  ['Marketing IA','Marketing IA'],
-  ['Produz conteúdo, analisa comunicação e apoia campanhas.','Produce contenido, analiza la comunicación y apoya campañas.'],
-  ['Estrutura inicial','Estructura inicial'],
-  ['Estado atual','Estado actual'],
-  ['O GoldenAx OS está em construção e será desenvolvido junto com a operação real da empresa. Ele não substitui aconselhamento jurídico, contábil ou financeiro profissional.','GoldenAx OS está en construcción y se desarrollará junto con la operación real de la empresa. No sustituye el asesoramiento jurídico, contable o financiero profesional.'],
-  ['Nenhuma IA pode realizar compras, pagamentos, contratações, compromissos financeiros ou decisões estratégicas críticas sem aprovação expressa do Founder.','Ninguna IA puede realizar compras, pagos, contrataciones, compromisos financieros o decisiones estratégicas críticas sin la aprobación expresa del fundador.'],
-  ['Os agentes podem pesquisar, analisar, preparar documentos, organizar informações, sugerir decisões e executar tarefas operacionais autorizadas.','Los agentes pueden investigar, analizar, preparar documentos, organizar información, sugerir decisiones y ejecutar tareas operativas autorizadas.'],
-  ['Política de Privacidade','Política de Privacidad'],
-  ['Última atualização:','Última actualización:'],
-  ['31 de julho de 2026.','31 de julio de 2026.'],
-  ['O site da GoldenAx apresenta informações institucionais e oferece formas de contato. O formulário desta versão prepara a mensagem e abre o WhatsApp do visitante para confirmação; as informações digitadas não são armazenadas pelo site.','El sitio de GoldenAx presenta información institucional y ofrece formas de contacto. El formulario de esta versión prepara el mensaje y abre el WhatsApp del visitante para su confirmación; la información ingresada no se almacena en el sitio.'],
-  ['Informações de contato','Información de contacto'],
-  ['Quando você envia um e-mail para a GoldenAx, as informações fornecidas são usadas para responder à solicitação e acompanhar o atendimento.','Cuando envía un correo electrónico a GoldenAx, la información proporcionada se utiliza para responder a la solicitud y dar seguimiento al servicio.'],
-  ['Cookies e análise','Cookies y análisis'],
-  ['Esta versão do site não utiliza cookies de publicidade nem ferramentas de análise comportamental.','Esta versión del sitio no utiliza cookies publicitarias ni herramientas de análisis de comportamiento.'],
-  ['Compartilhamento','Uso compartido'],
-  ['A GoldenAx não vende informações pessoais. Dados poderão ser compartilhados apenas quando necessário para cumprir obrigações legais ou prestar um serviço solicitado.','GoldenAx no vende información personal. Los datos solo podrán compartirse cuando sea necesario para cumplir obligaciones legales o prestar un servicio solicitado.'],
-  ['Dúvidas:','Consultas:'],
-  ['Dúvidas podem ser enviadas para','Las consultas pueden enviarse a'],
-  ['Termos de Uso','Términos de Uso'],
-  ['Este site apresenta informações institucionais da GoldenAx. O conteúdo não constitui proposta contratual automática, garantia de disponibilidade ou aconselhamento jurídico, contábil ou financeiro.','Este sitio presenta información institucional de GoldenAx. El contenido no constituye una propuesta contractual automática, garantía de disponibilidad ni asesoramiento jurídico, contable o financiero.'],
-  ['Serviços, escopo, prazos e valores serão definidos por comunicação ou proposta específica e dependerão de aprovação das partes.','Los servicios, el alcance, los plazos y los valores se definirán mediante comunicación o propuesta específica y dependerán de la aprobación de las partes.'],
-  ['Voltar ao site','Volver al sitio'],
-  ['Esta página não foi encontrada.','No se encontró esta página.'],
-  ['O endereço pode ter mudado ou não estar mais disponível.','La dirección puede haber cambiado o ya no estar disponible.'],
-  ['Voltar para a Home','Volver al inicio'],
-  ['A gente começa por aí.','Empezamos por ahí.'],
-  ['Agentes especializados, processos claros e responsabilidade definida.','Agentes especializados, procesos claros y responsabilidad definida.'],
-  ['Anos de','Años de'],
-  ['Atendimento','Atención'],
-  ['Conte o que está acontecendo.','Cuéntenos qué está pasando.'],
-  ['Experiência','Experiencia'],
-  ['George Machado','George Machado'],
-  ['Humano','Humano'],
-  ['Mais de duas décadas de tecnologia','Más de dos décadas de tecnología'],
-  ['PT/EN/ES','PT/EN/ES'],
-  ['Rápido','Rápida'],
-  ['Solicitar avaliação →','Solicitar evaluación →'],
-  ['Trilíngue','Trilingüe'],
-  ['Uma empresa organizada desde o início','Una empresa organizada desde el inicio'],
-  ['a serviço de pequenas empresas.','al servicio de pequeñas empresas.'],
-  ['com processos apoiados por IA.','con procesos apoyados por IA.']
-]);
-
 function normalizeText(value){return value.replace(/\s+/g,' ').trim()}
 
 function detectBrowserLanguage(){
   const saved=localStorage.getItem('goldenax-language');
-  if(['pt','en','es'].includes(saved))return saved;
+  if(saved==='pt'||saved==='en')return saved;
   const languages=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en'];
-  if(languages.some(language=>String(language).toLowerCase().startsWith('pt')))return 'pt';
-  return languages.some(language=>String(language).toLowerCase().startsWith('es'))?'es':'en';
+  return languages.some(language=>String(language).toLowerCase().startsWith('pt'))?'pt':'en';
 }
 
 function translateTextNodes(language){
@@ -291,19 +98,19 @@ function translateTextNodes(language){
   nodes.forEach(node=>{
     if(!node.parentElement.dataset.originalText)node.parentElement.dataset.originalText=normalizeText(node.nodeValue);
     const original=node.parentElement.dataset.originalText;
-    const translated=language==='es'?spanishTranslations.get(original):translations.get(original);
-    if(language!=='pt'&&translated)node.nodeValue=node.nodeValue.replace(normalizeText(node.nodeValue),translated);
-    if(language==='pt'&&(translations.has(original)||spanishTranslations.has(original)))node.nodeValue=node.nodeValue.replace(normalizeText(node.nodeValue),original);
+    const translated=translations.get(original);
+    if(language==='en'&&translated)node.nodeValue=node.nodeValue.replace(original,translated);
+    if(language==='pt'&&translated)node.nodeValue=node.nodeValue.replace(normalizeText(node.nodeValue),original);
   });
 }
 
 function applyLanguage(language,save=false){
   root.dataset.lang=language;
-  root.lang=language==='pt'?'pt-BR':language;
+  root.lang=language==='pt'?'pt-BR':'en';
   if(save)localStorage.setItem('goldenax-language',language);
 
   document.querySelectorAll('[data-pt][data-en]').forEach(el=>{
-    el.textContent=language==='pt'?el.dataset.pt:language==='es'?(el.dataset.es||spanishTranslations.get(el.dataset.pt)||el.dataset.pt):el.dataset.en;
+    el.textContent=language==='pt'?el.dataset.pt:el.dataset.en;
   });
   document.querySelectorAll('[data-pt-html][data-en-html]').forEach(el=>{
     el.innerHTML=language==='pt'?el.dataset.ptHtml:el.dataset.enHtml;
@@ -338,8 +145,8 @@ function installLanguageSwitcher(){
   function createSwitcher(location){
     const switcher=document.createElement('div');
     switcher.className=`language-switcher ${location}`;
-    switcher.setAttribute('aria-label','Selecionar idioma / Select language / Seleccionar idioma');
-    switcher.innerHTML='<button type="button" data-language="pt" aria-label="Selecionar português">PT</button><span class="divider" aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Select English">EN</button><span class="divider" aria-hidden="true">|</span><button type="button" data-language="es" aria-label="Seleccionar español">ES</button>';
+    switcher.setAttribute('aria-label','Selecionar idioma / Select language');
+    switcher.innerHTML='<button type="button" data-language="pt" aria-label="Selecionar português">Português</button><span class="divider" aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Select English">English</button>';
     switcher.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.language,true)));
     return switcher;
   }
@@ -356,14 +163,9 @@ if(form)form.addEventListener('submit',event=>{
   event.preventDefault();
   if(!form.reportValidity())return;
   const data=new FormData(form);
-  const language=root.dataset.lang;
-  const company=data.get('company')||(language==='pt'?'Não informado':language==='es'?'No informado':'Not provided');
-  const messages={
-    pt:`Olá, GoldenAx!\n\nMeu nome é ${data.get('name')}.\nEmpresa: ${company}\nMeu contato: ${data.get('contact')}\n\nComo preciso de ajuda:\n${data.get('message')}`,
-    en:`Hello, GoldenAx!\n\nMy name is ${data.get('name')}.\nCompany: ${company}\nMy contact: ${data.get('contact')}\n\nHow I need help:\n${data.get('message')}`,
-    es:`¡Hola, GoldenAx!\n\nMi nombre es ${data.get('name')}.\nEmpresa: ${company}\nMi contacto: ${data.get('contact')}\n\nCómo necesito ayuda:\n${data.get('message')}`
-  };
-  const text=messages[language]||messages.en;
+  const pt=root.dataset.lang==='pt';
+  const company=data.get('company')||(pt?'Não informado':'Not provided');
+  const text=pt?`Olá, GoldenAx!\n\nMeu nome é ${data.get('name')}.\nEmpresa: ${company}\nMeu contato: ${data.get('contact')}\n\nComo preciso de ajuda:\n${data.get('message')}`:`Hello, GoldenAx!\n\nMy name is ${data.get('name')}.\nCompany: ${company}\nMy contact: ${data.get('contact')}\n\nHow I need help:\n${data.get('message')}`;
   const whatsappUrl=`https://wa.me/14076978921?text=${encodeURIComponent(text)}`;
   const popup=window.open(whatsappUrl,'_blank','noopener,noreferrer');
   if(!popup)window.location.href=whatsappUrl;
