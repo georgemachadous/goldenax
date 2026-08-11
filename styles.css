@@ -4,7 +4,7 @@
 @media (min-width:961px) and (min-height:700px){
 .contact-page-compact .page-hero{padding-top:22px;padding-bottom:20px}
 .contact-page-compact .page-hero h1{margin:6px 0;font-size:clamp(32px,3vw,40px)}
-.contact-page-compact .section{padding-top:22px;padding-bottom:22px}
+.contact-page-compact .section{padding-top:22px;padding-bottom:32px}
 .contact-page-compact .contact-panel{padding:22px 30px;gap:34px}
 .contact-page-compact .contact-copy h2{font-size:28px}
 .contact-page-compact .contact-copy p{margin:8px 0}
