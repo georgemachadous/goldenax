@@ -278,6 +278,8 @@ function detectBrowserLanguage(){
   return languages.some(language=>String(language).toLowerCase().startsWith('es'))?'es':'en';
 }
 
+const originalTextNodes=new WeakMap();
+
 function translateTextNodes(language){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
     acceptNode(node){
@@ -289,8 +291,8 @@ function translateTextNodes(language){
   const nodes=[];
   while(walker.nextNode())nodes.push(walker.currentNode);
   nodes.forEach(node=>{
-    if(!node.parentElement.dataset.originalText)node.parentElement.dataset.originalText=normalizeText(node.nodeValue);
-    const original=node.parentElement.dataset.originalText;
+    if(!originalTextNodes.has(node))originalTextNodes.set(node,normalizeText(node.nodeValue));
+    const original=originalTextNodes.get(node);
     const translated=language==='es'?spanishTranslations.get(original):translations.get(original);
     if(language!=='pt'&&translated)node.nodeValue=node.nodeValue.replace(normalizeText(node.nodeValue),translated);
     if(language==='pt'&&(translations.has(original)||spanishTranslations.has(original)))node.nodeValue=node.nodeValue.replace(normalizeText(node.nodeValue),original);
