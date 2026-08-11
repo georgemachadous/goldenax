@@ -270,12 +270,37 @@ const spanishTranslations=new Map([
 
 function normalizeText(value){return value.replace(/\s+/g,' ').trim()}
 
-function detectBrowserLanguage(){
+function getSavedLanguage(){
   const saved=localStorage.getItem('goldenax-language');
-  if(['pt','en','es'].includes(saved))return saved;
+  return ['pt','en','es'].includes(saved)?saved:null;
+}
+
+function detectBrowserLanguage(){
   const languages=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en'];
   if(languages.some(language=>String(language).toLowerCase().startsWith('pt')))return 'pt';
   return languages.some(language=>String(language).toLowerCase().startsWith('es'))?'es':'en';
+}
+
+async function detectCountryLanguage(){
+  const spanishCountries=new Set(['AR','BO','CL','CO','CR','CU','DO','EC','SV','GQ','GT','HN','MX','NI','PA','PY','PE','PR','UY','VE']);
+  try{
+    const response=await fetch('/cdn-cgi/trace',{cache:'no-store'});
+    if(!response.ok)return null;
+    const country=(await response.text()).match(/^loc=([A-Z]{2})$/m)?.[1];
+    if(country==='BR')return 'pt';
+    if(country==='US')return 'en';
+    if(country==='ES'||spanishCountries.has(country))return 'es';
+  }catch(error){
+    console.info('Country detection unavailable; using browser language.');
+  }
+  return null;
+}
+
+async function selectInitialLanguage(){
+  const saved=getSavedLanguage();
+  if(saved)return saved;
+  const countryLanguage=await detectCountryLanguage();
+  return getSavedLanguage()||countryLanguage||detectBrowserLanguage();
 }
 
 const originalTextNodes=new WeakMap();
@@ -351,7 +376,7 @@ function installLanguageSwitcher(){
 }
 
 installLanguageSwitcher();
-applyLanguage(detectBrowserLanguage());
+selectInitialLanguage().then(language=>applyLanguage(language));
 
 const form=document.querySelector('#contact-form');
 if(form)form.addEventListener('submit',event=>{
