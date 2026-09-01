@@ -28,6 +28,7 @@ if(!reduce&&'IntersectionObserver'in window){
 const translations=new Map([
   ['Pular para o conteúdo','Skip to content'],
   ['Serviços','Services'],
+  ['Soluções','Solutions'],
   ['Sobre','About'],
   ['Contato','Contact'],
   ['Solicitar orçamento','Request a quote'],
@@ -79,6 +80,7 @@ const translations=new Map([
 const spanishTranslations=new Map([
   ['Pular para o conteúdo','Saltar al contenido'],
   ['Serviços','Servicios'],
+  ['Soluções','Soluciones'],
   ['Sobre','Nosotros'],
   ['Contato','Contacto'],
   ['Solicitar orçamento','Solicitar presupuesto'],
@@ -270,6 +272,50 @@ const spanishTranslations=new Map([
 
 function normalizeText(value){return value.replace(/\s+/g,' ').trim()}
 
+const navigationTranslations={
+  pt:{
+    'index.html':'Home',
+    'services.html':'Serviços',
+    'accesscontrolsaas.html':'Soluções',
+    'about.html':'Sobre',
+    'founder.html':'Founder',
+    'goldenax-os.html':'GoldenAx OS',
+    'contact.html':'Contato',
+    quote:'Solicitar orçamento'
+  },
+  en:{
+    'index.html':'Home',
+    'services.html':'Services',
+    'accesscontrolsaas.html':'Solutions',
+    'about.html':'About',
+    'founder.html':'Founder',
+    'goldenax-os.html':'GoldenAx OS',
+    'contact.html':'Contact',
+    quote:'Request a quote'
+  },
+  es:{
+    'index.html':'Inicio',
+    'services.html':'Servicios',
+    'accesscontrolsaas.html':'Soluciones',
+    'about.html':'Nosotros',
+    'founder.html':'Fundador',
+    'goldenax-os.html':'GoldenAx OS',
+    'contact.html':'Contacto',
+    quote:'Solicitar presupuesto'
+  }
+};
+
+function translateNavigation(language){
+  const labels=navigationTranslations[language]||navigationTranslations.en;
+  nav?.querySelectorAll('a').forEach(link=>{
+    const page=new URL(link.getAttribute('href'),window.location.href).pathname.split('/').pop()||'index.html';
+    const key=link.classList.contains('quote')?'quote':page;
+    if(labels[key])link.textContent=labels[key];
+  });
+  nav?.setAttribute('aria-label',language==='pt'?'Navegação principal':language==='es'?'Navegación principal':'Main navigation');
+  if(menu)menu.setAttribute('aria-label',language==='pt'?'Abrir menu':language==='es'?'Abrir menú':'Open menu');
+}
+
 function getSavedLanguage(){
   const saved=localStorage.getItem('goldenax-language');
   return ['pt','en','es'].includes(saved)?saved:null;
@@ -340,6 +386,7 @@ function applyLanguage(language,save=false){
   });
 
   translateTextNodes(language);
+  translateNavigation(language);
 
   document.querySelectorAll('.language-switcher button').forEach(button=>{
     const active=button.dataset.language===language;
