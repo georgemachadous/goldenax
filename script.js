@@ -705,7 +705,8 @@ function translateAttributes(language){
 }
 
 function translateMetadata(language){
-  const page=window.location.pathname.split('/').pop()||'index.html';
+  const pathName=window.location.pathname.split('/').pop();
+  const page=!pathName?'index.html':pathName.includes('.')?pathName:`${pathName}.html`;
   const metadata=pageMetadata[page]?.[language]||pageMetadata[page]?.en;
   if(!metadata)return;
   document.title=metadata[0];
