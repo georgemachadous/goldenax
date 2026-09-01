@@ -26,3 +26,22 @@
 @media (max-width:640px){
 .contact-page-compact .contact-panel{padding:24px 20px}
 }
+
+/* Preserve the GoldenAx OS brand spelling and move crowded desktop navigation
+   into the accessible menu before the quote button can overflow. */
+.nav a[href="goldenax-os.html"]{text-transform:none}
+@media (min-width:961px) and (max-width:1120px){
+  .founder-portrait{justify-self:center}
+  .utility-contact span:nth-child(n+2),.utility-social{display:none}
+  .menu-toggle{display:block}
+  .nav{position:absolute;top:78px;left:18px;right:18px;display:none;flex-direction:column;align-items:stretch;gap:2px;padding:14px;border:1px solid var(--line);border-radius:8px;background:#fff;box-shadow:var(--shadow)}
+  .nav.open{display:flex}
+  .nav a,.nav button{text-align:center;padding:9px}
+  .reference-hero{grid-template-columns:1fr}
+  .reference-hero-copy{padding:50px var(--gutter)}
+  .reference-hero-image{min-height:500px;margin:0}
+  .reference-band-inner,.reference-bottom,.content-grid,.founder-grid,.contact-panel{grid-template-columns:1fr}
+  .reference-band-inner>div+div{padding-left:0;border-left:0}
+  .problem-grid,.value-grid,.agent-grid{grid-template-columns:1fr 1fr}
+  .contact-panel{gap:28px}
+}
