@@ -597,7 +597,7 @@ const navigationTranslations={
     'accesscontrolsaas.html':'Soluções',
     'about.html':'Sobre',
     'founder.html':'Founder',
-    'goldenax-os.html':'GoldenAx OS',
+    'goldenax-os.html':'Sistema Operacional GoldenAx',
     'contact.html':'Contato',
     quote:'Solicitar orçamento'
   },
@@ -617,7 +617,7 @@ const navigationTranslations={
     'accesscontrolsaas.html':'Soluciones',
     'about.html':'Nosotros',
     'founder.html':'Fundador',
-    'goldenax-os.html':'GoldenAx OS',
+    'goldenax-os.html':'Sistema Operativo GoldenAx',
     'contact.html':'Contacto',
     quote:'Solicitar presupuesto'
   }
