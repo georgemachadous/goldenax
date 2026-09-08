@@ -566,6 +566,11 @@ const pageMetadata={
     en:['GoldenAx OS | AI-supported company operations','Discover GoldenAx OS, GoldenAx’s governance, process and AI-agent structure.'],
     es:['GoldenAx OS | Operación empresarial con apoyo de IA','Conozca GoldenAx OS, la estructura de gobernanza, procesos y agentes de IA de GoldenAx.']
   },
+  'employees.html':{
+    pt:['Área do funcionário | GoldenAx','Acesso centralizado dos funcionários às aplicações corporativas da GoldenAx.'],
+    en:['Employee area | GoldenAx','Centralized employee access to GoldenAx corporate applications.'],
+    es:['Área del empleado | GoldenAx','Acceso centralizado de los empleados a las aplicaciones corporativas de GoldenAx.']
+  },
   'contact.html':{
     pt:['Contato | GoldenAx','Fale com a GoldenAx sobre suporte de TI, redes, computadores e presença digital.'],
     en:['Contact | GoldenAx','Talk to GoldenAx about IT support, networks, computers and digital presence.'],
@@ -597,7 +602,7 @@ const navigationTranslations={
     'accesscontrolsaas.html':'Soluções',
     'about.html':'Sobre',
     'founder.html':'Founder',
-    'goldenax-os.html':'Sistema Operacional GoldenAx',
+    'employees.html':'Área do funcionário',
     'contact.html':'Contato',
     quote:'Solicitar orçamento'
   },
@@ -607,7 +612,7 @@ const navigationTranslations={
     'accesscontrolsaas.html':'Solutions',
     'about.html':'About',
     'founder.html':'Founder',
-    'goldenax-os.html':'GoldenAx OS',
+    'employees.html':'Employee area',
     'contact.html':'Contact',
     quote:'Request a quote'
   },
@@ -617,7 +622,7 @@ const navigationTranslations={
     'accesscontrolsaas.html':'Soluciones',
     'about.html':'Nosotros',
     'founder.html':'Fundador',
-    'goldenax-os.html':'Sistema Operativo GoldenAx',
+    'employees.html':'Área del empleado',
     'contact.html':'Contacto',
     quote:'Solicitar presupuesto'
   }
