@@ -27,9 +27,25 @@
 .contact-page-compact .contact-panel{padding:24px 20px}
 }
 
-/* Preserve the GoldenAx OS brand spelling and move crowded desktop navigation
-   into the accessible menu before the quote button can overflow. */
-.nav a[href="goldenax-os.html"]{text-transform:none}
+/* Keep product and internal-area names readable in the uppercase navigation. */
+.nav a[href="employees.html"]{text-transform:none}
+
+/* Employee application portal. */
+.employee-hero{padding:58px var(--gutter) 52px;background:radial-gradient(circle at 80% 20%,rgba(201,145,32,.22),transparent 34%),linear-gradient(135deg,#272a2f,#101215);color:#fff}
+.employee-hero-inner{width:min(100%,1100px);margin:auto}
+.employee-hero h1{margin:12px 0 10px;font-size:clamp(40px,5vw,58px);line-height:1.04;letter-spacing:-.05em}
+.employee-hero p{max-width:680px;margin:0;color:#c9ccd0;font-size:15px}
+.employee-apps-section{background:linear-gradient(#f7f6f2,#fff)}
+.employee-app-grid{width:min(100%,1100px);margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.employee-app-card{display:grid;grid-template-columns:82px 1fr;gap:22px;align-items:start;padding:28px;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:var(--shadow)}
+.employee-app-icon{width:72px;height:72px;display:grid;place-items:center;border:2px solid var(--gold);border-radius:14px;background:#17191c;color:var(--gold-light);font-size:23px;font-weight:900}
+.employee-app-status{color:var(--gold-dark);font-size:10px;font-weight:900;letter-spacing:.1em}
+.employee-app-card h2{margin:5px 0 7px;font-size:23px;line-height:1.15}
+.employee-app-card p{min-height:48px;margin:0 0 18px;color:var(--text);font-size:13px}
+.employee-security-note{width:min(100%,1100px);margin:24px auto 0;padding:18px 20px;border-left:4px solid var(--gold);background:#eeece5}
+.employee-security-note strong{display:block;margin-bottom:4px}
+.employee-security-note p{margin:0;color:var(--text);font-size:13px}
+@media(max-width:760px){.employee-app-grid{grid-template-columns:1fr}.employee-app-card{grid-template-columns:1fr}.employee-app-card p{min-height:0}.employee-hero{padding:42px 20px}.employee-hero p,.employee-app-card p,.employee-security-note p{font-size:16px}.employee-app-card .btn{width:100%}}
 @media (min-width:961px) and (max-width:1120px){
   .founder-portrait{justify-self:center}
   .utility-contact span:nth-child(n+2),.utility-social{display:none}
