@@ -116,3 +116,20 @@
   .nav>a:not(.quote),.nav .lang{color:#fff}
   .nav a.active{color:var(--gold-light)}
 }
+
+
+/* GoldenAx multilingual brand banner. Text stays in HTML for language switching. */
+.brand-banner{position:relative;isolation:isolate;background:#050606;color:#fff;border-bottom:1px solid #806020;overflow:hidden}
+.brand-banner::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(132deg,transparent 5%,#c9912030 5.2%,transparent 5.5%,transparent 14%,#e8bd5570 14.15%,transparent 14.4%,transparent 89%,#c9912060 89.2%,transparent 89.5%),radial-gradient(ellipse at 90% 50%,#c991201c,transparent 50%)}
+.brand-banner-inner{position:relative;width:min(calc(100% - 48px),var(--wide));min-height:210px;margin:auto;display:flex;align-items:center;gap:clamp(28px,5vw,80px);padding:24px 0}
+.brand-banner-logo{flex:0 0 clamp(112px,13vw,164px);position:relative;z-index:1;border:2px solid #e8bd55;border-radius:24px;padding:3px;background:#050606;box-shadow:0 8px 26px #0008;overflow:hidden}
+.brand-banner-logo img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:20px}
+.brand-banner-copy{position:relative;z-index:1;min-width:0}
+.brand-banner-title{margin:0;font-size:clamp(24px,3vw,40px);font-weight:750;line-height:1.18;letter-spacing:-.035em;text-wrap:balance}
+.brand-banner-title strong{color:#e8bd55}
+.brand-banner-services{display:flex;flex-wrap:wrap;gap:12px 20px;margin:18px 0 0;padding:14px 0 0;list-style:none;border-top:1px solid #c9912070}
+.brand-banner-services li{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em}
+.brand-banner-services svg{width:25px;height:25px;fill:none;stroke:#e8bd55;stroke-width:1.4;flex-shrink:0}
+.brand-banner-globe{position:absolute;right:0;top:50%;transform:translateY(-50%);width:240px;height:240px;fill:none;stroke:#c99120;stroke-width:.8;opacity:.22;pointer-events:none}
+@media(min-width:1121px){.brand-banner+.header .logo{display:none}.brand-banner+.header .header-inner{min-height:64px;justify-content:center}}
+@media(max-width:640px){.brand-banner-inner{width:calc(100% - 32px);gap:16px;padding:20px 0;min-height:180px;align-items:flex-start}.brand-banner-logo{flex-basis:76px;border-radius:15px}.brand-banner-logo img{border-radius:12px}.brand-banner-title{font-size:clamp(20px,5vw,28px);line-height:1.25}.brand-banner-services{gap:9px;margin-top:12px;padding-top:10px}.brand-banner-services li{font-size:10px;gap:6px}.brand-banner-services svg{width:20px;height:20px}.brand-banner-globe{width:180px;height:180px;opacity:.12}}
