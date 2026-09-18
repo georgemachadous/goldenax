@@ -159,3 +159,14 @@
  .brand-header .brand-navigation{grid-column:1/-1;margin-top:0}
  .brand-navigation .nav>a{font-size:14px}
 }
+
+
+/* Raised logo and geographic globe, matching the institutional reference. */
+.header.brand-header{margin-bottom:20px}
+.brand-header .brand-banner{overflow:visible}
+.brand-header .brand-banner-logo{align-self:flex-end;transform:translateY(42px);border:2px solid #f4f0e6;box-shadow:0 8px 18px #0003}
+.brand-header .brand-banner-globe{width:250px;height:250px;opacity:.75;right:0;max-height:100%;object-fit:contain}
+.brand-header .brand-banner-title{padding-right:190px}
+.brand-header .brand-navigation{position:relative;background:linear-gradient(90deg,#050606 70%,#050606d9)}
+@media(max-width:1120px){.brand-header .brand-banner-title{padding-right:140px}.brand-header .brand-banner-globe{width:210px;height:210px;opacity:.45}}
+@media(max-width:640px){.header.brand-header{margin-bottom:0}.brand-header .brand-banner-logo{align-self:center;transform:none}.brand-header .brand-banner-title{padding-right:0}.brand-header .brand-banner-globe{width:150px;height:150px;opacity:.2;top:75px}.brand-header .brand-navigation{background:transparent}}
