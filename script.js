@@ -732,7 +732,8 @@ function applyLanguage(language,save=false){
   if(save)localStorage.setItem('goldenax-language',language);
 
   document.querySelectorAll('[data-pt][data-en]').forEach(el=>{
-    el.textContent=language==='pt'?el.dataset.pt:language==='es'?(el.dataset.es||spanishTranslations.get(el.dataset.pt)||el.dataset.pt):el.dataset.en;
+    const label=el.querySelector('.nav-label')||el;
+    label.textContent=language==='pt'?el.dataset.pt:language==='es'?(el.dataset.es||spanishTranslations.get(el.dataset.pt)||el.dataset.pt):el.dataset.en;
   });
   document.querySelectorAll('[data-pt-html][data-en-html]').forEach(el=>{
     el.innerHTML=language==='pt'?el.dataset.ptHtml:language==='es'?(el.dataset.esHtml||el.dataset.enHtml):el.dataset.enHtml;
@@ -803,3 +804,4 @@ if(form)form.addEventListener('submit',event=>{
 
 const year=document.querySelector('#current-year');
 if(year)year.textContent=new Date().getFullYear();
+
