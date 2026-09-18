@@ -633,7 +633,10 @@ function translateNavigation(language){
   nav?.querySelectorAll('a').forEach(link=>{
     const page=new URL(link.getAttribute('href'),window.location.href).pathname.split('/').pop()||'index.html';
     const key=link.classList.contains('quote')?'quote':page;
-    if(labels[key])link.textContent=labels[key];
+    if(labels[key]){
+      const label=link.querySelector('.nav-label')||link;
+      label.textContent=labels[key];
+    }
   });
   nav?.setAttribute('aria-label',language==='pt'?'Navegação principal':language==='es'?'Navegación principal':'Main navigation');
   if(menu)menu.setAttribute('aria-label',language==='pt'?'Abrir menu':language==='es'?'Abrir menú':'Open menu');
