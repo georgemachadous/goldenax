@@ -133,3 +133,29 @@
 .brand-banner-globe{position:absolute;right:0;top:50%;transform:translateY(-50%);width:240px;height:240px;fill:none;stroke:#c99120;stroke-width:.8;opacity:.22;pointer-events:none}
 @media(min-width:1121px){.brand-banner+.header .logo{display:none}.brand-banner+.header .header-inner{min-height:64px;justify-content:center}}
 @media(max-width:640px){.brand-banner-inner{width:calc(100% - 32px);gap:16px;padding:20px 0;min-height:180px;align-items:flex-start}.brand-banner-logo{flex-basis:76px;border-radius:15px}.brand-banner-logo img{border-radius:12px}.brand-banner-title{font-size:clamp(20px,5vw,28px);line-height:1.25}.brand-banner-services{gap:9px;margin-top:12px;padding-top:10px}.brand-banner-services li{font-size:10px;gap:6px}.brand-banner-services svg{width:20px;height:20px}.brand-banner-globe{width:180px;height:180px;opacity:.12}}
+
+/* Icon navigation shares the banner beneath the slogan. */
+.header.brand-header{position:relative;top:auto;background:#050606;backdrop-filter:none}
+.brand-header .brand-banner-copy{flex:1}
+.brand-header .brand-banner-inner{gap:clamp(20px,3vw,48px)}
+.brand-navigation{margin-top:18px;border-top:1px solid #c9912070;padding-top:12px}
+.brand-navigation .nav{position:static;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px 20px;white-space:normal;background:transparent;border:0;box-shadow:none;padding:0}
+.brand-navigation .nav>a{display:inline-flex;align-items:center;gap:8px;min-height:44px;text-align:left;font-size:11px}
+.brand-navigation .nav-icon{width:23px;height:23px;flex:0 0 23px;fill:none;stroke:#e8bd55;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.brand-navigation .nav .quote{padding:0 14px}
+.brand-navigation .quote .nav-icon{stroke:#151515}
+.brand-navigation .menu-toggle{display:none}
+@media(max-width:1120px){
+ .brand-navigation .menu-toggle{display:block;margin-left:auto;border:1px solid #c9912070;border-radius:6px;min-width:44px;min-height:44px}
+ .brand-navigation .nav{display:none;flex-direction:column;align-items:stretch;max-height:none;overflow:visible}
+ .brand-navigation .nav.open{display:flex}
+ .brand-navigation .nav>a{font-size:13px;padding:8px}
+ .brand-navigation .nav .quote{justify-content:center}
+}
+@media(max-width:640px){
+ .brand-header .brand-banner-inner{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px 16px}
+ .brand-header .brand-banner-copy{display:contents}
+ .brand-header .brand-banner-title{align-self:center}
+ .brand-header .brand-navigation{grid-column:1/-1;margin-top:0}
+ .brand-navigation .nav>a{font-size:14px}
+}
