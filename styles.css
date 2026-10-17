@@ -161,12 +161,25 @@
 }
 
 
-/* Raised logo and geographic globe, matching the institutional reference. */
+/* Raised logo and complete geographic globe. */
 .header.brand-header{margin-bottom:20px}
 .brand-header .brand-banner{overflow:visible}
 .brand-header .brand-banner-logo{align-self:flex-end;transform:translateY(42px);border:2px solid #f4f0e6;box-shadow:0 8px 18px #0003}
-.brand-header .brand-banner-globe{width:250px;height:250px;opacity:.75;right:0;max-height:100%;object-fit:contain}
-.brand-header .brand-banner-title{padding-right:190px}
-.brand-header .brand-navigation{position:relative;background:linear-gradient(90deg,#050606 70%,#050606d9)}
-@media(max-width:1120px){.brand-header .brand-banner-title{padding-right:140px}.brand-header .brand-banner-globe{width:210px;height:210px;opacity:.45}}
-@media(max-width:640px){.header.brand-header{margin-bottom:0}.brand-header .brand-banner-logo{align-self:center;transform:none}.brand-header .brand-banner-title{padding-right:0}.brand-header .brand-banner-globe{width:150px;height:150px;opacity:.2;top:75px}.brand-header .brand-navigation{background:transparent}}
+/* Reserve a right-hand column for the globe so neither title nor menu covers it. */
+.brand-header .brand-banner-copy{padding-right:184px}
+.brand-header .brand-banner-globe{width:160px;height:160px;opacity:.9;right:0;max-height:none;object-fit:contain}
+.brand-header .brand-banner-title{padding-right:0}
+.brand-header .brand-navigation{position:relative;background:transparent}
+@media(max-width:1120px){
+ .brand-header .brand-banner-copy{padding-right:164px}
+ .brand-header .brand-banner-globe{width:144px;height:144px}
+}
+@media(max-width:640px){
+ .header.brand-header{margin-bottom:0}
+ .brand-header .brand-banner-inner{grid-template-columns:76px minmax(0,1fr) 64px;gap:12px}
+ .brand-header .brand-banner-logo{align-self:center;transform:none;grid-column:1;grid-row:1}
+ .brand-header .brand-banner-copy{padding-right:0}
+ .brand-header .brand-banner-title{grid-column:2;grid-row:1;padding-right:0;font-size:clamp(17px,4.3vw,24px)}
+ .brand-header .brand-banner-globe{position:static;grid-column:3;grid-row:1;align-self:center;width:64px;height:64px;opacity:.9;transform:none}
+ .brand-header .brand-navigation{grid-column:1/-1;grid-row:2;background:transparent}
+}
