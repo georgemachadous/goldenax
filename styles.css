@@ -171,3 +171,46 @@
 .brand-header .brand-navigation{position:relative;background:linear-gradient(90deg,#050606 70%,#050606d9)}
 @media(max-width:1120px){.brand-header .brand-banner-title{padding-right:140px}.brand-header .brand-banner-globe{width:210px;height:210px;opacity:.45}}
 @media(max-width:640px){.header.brand-header{margin-bottom:0}.brand-header .brand-banner-logo{align-self:center;transform:none}.brand-header .brand-banner-title{padding-right:0}.brand-header .brand-banner-globe{width:150px;height:150px;opacity:.2;top:75px}.brand-header .brand-navigation{background:transparent}}
+
+/* Client portfolio and globe-safe, single-row desktop navigation. */
+.brand-header .brand-banner-copy{padding-right:274px}
+.brand-header .brand-banner-title{padding-right:0}
+.brand-navigation .nav{flex-wrap:nowrap;white-space:nowrap;gap:clamp(6px,.65vw,12px)}
+.brand-navigation .nav>a{gap:5px;font-size:clamp(9px,.65vw,11px);flex-shrink:0}
+.brand-navigation .nav-icon{width:18px;height:18px;flex-basis:18px}
+.brand-navigation .nav .quote{padding:0 10px}
+.clients-page{background:#fff}
+.clients-section{padding-top:44px}
+.clients-inner{width:min(100%,var(--content));margin:auto}
+.clients-breadcrumb{margin:0 0 18px;color:var(--muted);font-size:14px}
+.clients-breadcrumb span{color:var(--gold-dark)}
+.clients-inner h1{margin:0;font-size:clamp(34px,4vw,54px);line-height:1.12;letter-spacing:-.04em}
+.clients-intro{color:var(--muted);margin:12px 0 32px}
+.client-card{display:grid;grid-template-columns:minmax(0, .85fr) minmax(0,1.65fr);gap:28px;border:1px solid var(--line);border-radius:10px;padding:28px;background:#fff}
+.client-logo{display:flex;align-items:center;justify-content:center;padding:12px;border-right:1px solid var(--line)}
+.client-logo img{width:100%;height:auto;object-fit:contain}
+.client-details{min-width:0}
+.client-details h2{font-size:30px;line-height:1.2;margin:0 0 8px}
+.client-details p{color:var(--muted);margin:0 0 10px}
+.client-url{display:block;overflow-wrap:anywhere;margin-bottom:18px;color:var(--text)}
+@media(max-width:1399px){
+ .brand-header .brand-banner-copy{padding-right:274px}
+ .brand-navigation .menu-toggle{display:block;margin-left:0;border:1px solid #c9912070;border-radius:6px;min-width:44px;min-height:44px}
+ .brand-navigation .nav{display:none;flex-direction:column;align-items:stretch;white-space:normal;gap:6px}
+ .brand-navigation .nav.open{display:flex}
+ .brand-navigation .nav>a{font-size:14px;padding:8px;min-height:44px}
+ .brand-navigation .nav .quote{justify-content:center}
+ .brand-navigation .nav-icon{width:23px;height:23px;flex-basis:23px}
+}
+@media(max-width:1120px){.brand-header .brand-banner-copy{padding-right:230px}}
+@media(max-width:640px){
+ .brand-header .brand-banner-copy{padding-right:0}
+ .brand-header .brand-banner-inner{grid-template-columns:76px minmax(0,1fr);padding-right:0}
+ .brand-header .brand-banner-title{padding-right:100px;font-size:clamp(16px,4vw,22px)}
+ .brand-header .brand-banner-globe{width:96px;height:96px;top:58px;opacity:.75}
+ .brand-header .brand-navigation{margin-right:110px}
+ .clients-section{padding-top:28px}
+ .client-card{grid-template-columns:minmax(0,1fr);padding:20px;gap:20px}
+ .client-logo{border-right:0;border-bottom:1px solid var(--line);padding:12px 0 24px}
+ .client-logo img{max-width:360px}
+}
